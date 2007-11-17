@@ -1,6 +1,6 @@
 %define module	Class-Inspector
 %define name	perl-%{module}
-%define version 1.17
+%define version 1.18
 %define release %mkrel 1
 
 Name:		    %{name}
