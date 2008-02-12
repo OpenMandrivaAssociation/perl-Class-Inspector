@@ -1,6 +1,6 @@
 %define module	Class-Inspector
 %define name	perl-%{module}
-%define version 1.18
+%define version 1.20
 %define release %mkrel 1
 
 Name:		    %{name}
@@ -10,7 +10,7 @@ Summary:	    Get information about a class and its structure
 License:	    GPL or Artistic
 Group:		    Development/Perl
 Url:            http://search.cpan.org/dist/%{module}
-Source:         http://www.cpan.org/modules/by-module/Class/%{module}-%{version}.tar.bz2
+Source:         http://www.cpan.org/modules/by-module/Class/%{module}-%{version}.tar.gz
 %if %{mdkversion} < 1010
 Buildrequires:	perl-devel
 %endif
