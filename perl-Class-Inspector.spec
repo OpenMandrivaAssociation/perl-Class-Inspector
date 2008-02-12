@@ -15,6 +15,7 @@ Source:         http://www.cpan.org/modules/by-module/Class/%{module}-%{version}
 Buildrequires:	perl-devel
 %endif
 BuildArch:	    noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Class::Inspector allows you to get information about a loaded class.
