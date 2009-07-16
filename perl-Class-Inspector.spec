@@ -1,21 +1,21 @@
-%define module	Class-Inspector
-%define name	perl-%{module}
-%define version 1.24
-%define release %mkrel 1
+%define upstream_name	 Class-Inspector
+%define upstream_version 1.24
 
-Name:		    %{name}
-Version:	    %{version}
-Release:	    %{release}
+Name:		    perl-%{upstream_name}
+Version:	    %perl_convert_version %{upstream_version}
+Release:	    %mkrel 1
+
 Summary:	    Get information about a class and its structure 
-License:	    GPL or Artistic
+License:	    GPL+ or Artistic
 Group:		    Development/Perl
-Url:            http://search.cpan.org/dist/%{module}
-Source:         http://www.cpan.org/modules/by-module/Class/%{module}-%{version}.tar.gz
+Url:            http://search.cpan.org/dist/%{upstream_name}
+Source0:        http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.gz
+
 %if %{mdkversion} < 1010
 Buildrequires:	perl-devel
 %endif
-BuildArch:	    noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildArch: noarch
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Class::Inspector allows you to get information about a loaded class.
@@ -26,7 +26,7 @@ attempts to provide an easier, more friendly interface to this
 information.
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
