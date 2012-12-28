@@ -1,9 +1,9 @@
 %define upstream_name	 Class-Inspector
-%define upstream_version 1.25
+%define upstream_version 1.28
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Release:	1
 
 Summary:	Get information about a class and its structure 
 License:	GPL+ or Artistic
